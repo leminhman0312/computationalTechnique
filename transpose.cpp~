@@ -1,0 +1,55 @@
+#include <iostream>
+#include <stdio.h>
+#include <fstream>
+using namespace std;
+
+int main() {
+
+	int n_row,n_col, i, j, first[11][11],trans[11][11];
+	printf ("Please enter number of rows and column");
+	scanf("%d%d", &n_row,&n_col);
+
+	std::ofstream output("transpose results.txt");
+	
+	/* Entering 1st matrix */
+
+	printf("Enter 1st matrix element");
+	output << "First matrix = \n";
+	for (i=1;i<=n_row;i++){
+
+		for(j=1;j<=n_col;j++){
+
+			scanf("%d",&first[i][j]);
+			output << first[i][j] << " ";
+
+		}
+		printf(" \n");
+		output << ";" << endl;
+	}
+
+
+	for (i=1;i<=n_row;i++){
+		for (j=1;j<=n_col;j++){
+
+			trans[j][i]=first[i][j];
+		}
+	}
+
+	printf("Transpose of 1st = \n");
+	output << "Transpose of 1st matrix = \n";
+	for (i = 1; i<=n_row;i++){
+		for(j=1;j<=n_col;j++){
+			printf("%d",trans[i][j]);
+			printf("\t");
+			output << trans[i][j] << endl;	
+			
+		}
+		
+		printf("\n");
+	}
+	printf("  \n");
+	output << ";" << endl;
+
+	return 0;
+}
+

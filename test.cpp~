@@ -1,0 +1,161 @@
+//============================================================================
+// Name        : hw1_act.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main() {
+
+	int n_row,n_col, i, j, first[11][11],second[11][11],add[11][11],subtract[11][11],multi[11][11],trans[11][11];
+	printf ("Please enter number of rows and column");
+	scanf("%d%d", &n_row,&n_col);
+
+	FILE *outfile;
+	outfile = fopen("results.txt","a");
+	
+	/* Entering 1st matrix */
+
+	printf("Enter 1st matrix element");
+	for (i=1;i<=n_row;i++){
+
+		for(j=1;j<=n_col;j++){
+
+			scanf("%d",&first[i][j]);
+			fprintf("The 1st matrix is ", first[i][j]);
+
+		}
+		printf(" \n");
+		
+	}
+
+
+	/* Entering 2nd matrix */
+
+	printf("Enter 2nd matrix element");
+		for (i=1;i<=n_row;i++){
+
+			for(j=1;j<=n_col;j++){
+
+				scanf("%d",&second[i][j]);
+				fprintf("The 2nd matrix is ", second[i][j]);
+
+			}
+		printf(" \n");
+		
+		}
+
+	/* Sum of 2 matrices */
+
+	
+
+	printf("Sum of two matrices = \n");
+		for (i = 1; i<=n_row;i++){
+
+		for (j=1;j<=n_col;j++){
+
+			add[i][j]=first[i][j]+second[i][j];
+			printf("%d",add[i][j]);
+			printf("\t");
+			fprintf("The sum is ", add[i][j]);
+
+		}
+		printf(" \n");
+			
+	}
+
+	/*Subtraction b/e 2 matrices */
+
+	printf("Difference of two matrices = \n");
+		for (i =1;i<=n_row;i++){
+		for (j=1;j<=n_col;j++){
+
+			subtract[i][j] = first[i][j]-second[i][j];
+			printf("%d",subtract[i][j]);
+			printf("\t");
+			fprintf("The difference is ", subtract[i][j]);
+
+		}
+		printf("  \n");
+		
+	}
+
+	/* Product of 2 matrices */
+
+	printf("Multiplication of two matrices = \n");
+		for (i=1;i<=n_row;i++){
+
+		for (j=1;j<=n_col;j++){
+			double element = 0;
+			for (int k =1;k<=n_row;k++){
+				element = element + (first[i][k]*second[k][j]);
+
+			}
+			multi[i][j]= element;
+			printf("%d",multi[i][j]);
+			printf("\t");
+			fprintf("The product is ", multi[i][j]);
+		}
+		printf("  \n");
+		
+
+	}
+
+	/* Transpose 2 given matrices */
+	/* Transpose of 1st matrix */ 
+
+	for (i=1;i<=n_row;i++){
+		for (j=1;j<=n_col;j++){
+
+			trans[j][i]=first[i][j];
+		}
+	}
+
+	printf("Transpose of 1st = \n");
+		for (i = 1; i<=n_row;i++){
+		for(j=1;j<=n_col;j++){
+			printf("%d",trans[i][j]);
+			printf("\t");
+			fprintf("The 1st transpose is ", trans[i][j]);			
+			
+			
+		}
+		
+		printf("\n");
+	}
+	printf("  \n");
+	
+
+	/* Transpose of 2nd matrix */ 
+
+	for (i=1;i<=n_row;i++){
+		for (j=1;j<=n_col;j++){
+
+			trans[j][i]=second[i][j];
+		}
+	}
+
+	printf("Transpose of 2nd = \n");
+		for (i = 1; i<=n_row;i++){
+		for(j=1;j<=n_col;j++){
+			printf("%d",trans[i][j]);
+			printf("\t");
+			fprintf("The 2nd transpose is ", trans[i][j]);
+		}
+		printf("\n");
+	}
+	printf("  \n");
+	
+	fclose(outfile);
+
+
+	
+	return 0;
+
+}
+

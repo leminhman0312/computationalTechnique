@@ -1,0 +1,17 @@
+%% SURFACE PLOT
+xtil = [0:0.1:3];
+ytil = [-2:0.1:2];
+[X,Y] = meshgrid(xtil,ytil);
+A = (X.^2).*Y;
+B = ((X.^2) + (Y.^2)).^2;
+z = (-2/pi)*(A./B);
+figure(1)
+colormap_index 
+colorbar
+surf(X,Y,z,'EdgeColor','none'))
+axis equal
+
+
+%% 2D CONTOUR PLOT
+%% (2)
+%%contour(X,Y,z,20) change this number to get more curves 

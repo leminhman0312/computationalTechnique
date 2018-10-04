@@ -1,0 +1,91 @@
+
+----------------------------------------------------------
+Question 1: FIXED POINT ITERATION METHOD 
+Given f(x) = x^3 - 8x^2 + 6x + 6 
+Initial guess is 2.000 
+Number of iteration is 5.000 
+
+n 	|x0 	|  x 	 | Relative error (%) 
+-------------------------------------
+1 	|2.000 	| 1.500  | 50.0000 
+2 	|1.500 	| 1.542  |  4.1667 
+3 	|1.542 	| 1.531  |  1.0784 
+4 	|1.531 	| 1.534  |  0.2642 
+5 	|1.534 	| 1.533  |  0.0657 
+The root of f(x)=0 is 1.533 
+The percent relative error = 0.0657 %.
+
+----------------------------------------------------------
+Question 1: NEWTON-RAPHSON's METHOD 
+Given f(x) = x^3 - 8x^2 + 6x + 6 
+Initial guess is 2.000 
+Number of iteration is 5 
+
+n 	|x0 	|x	| Relative error(%) 
+--------------------------------------
+1 	|2.000 	|1.571 	|  21.4286 
+2 	|1.571 	|1.533 	|   2.4190 
+3 	|1.533 	|1.533 	|   0.0273 
+4 	|1.533 	|1.533 	|   0.0000 
+5 	|1.533 	|1.533 	|   0.0000 
+
+The root of f(x)=0 is 1.533 
+The percent relative error = 0.0000 %.
+
+----------------------------------------------------------
+Question 1: SECANT METHOD 
+Given f(x) = x^3 - 8x^2 + 6x + 6 
+Initial guesses are: 1.000 and 2.000 
+Number of iteration is 5.000 
+n 	|x_minus1 	|x0 	| Relative percent error(%) 
+----------------------------------------------------------
+1 	|2.000 		|1.000 	|31.2500 
+2 	|1.000 		|1.455 	| 6.2493 
+3 	|1.455 		|1.552 	| 1.2366 
+4 	|1.552 		|1.533 	| 0.0289 
+5 	|1.533 		|1.533 	| 0.0002 
+Root of f(x) = 0 is 1.5330 
+The percent relative error = 0.0002 %.
+
+----------------------------------------------------------
+Question 2: TRAPEZOIDAL METHOD 
+Lower bound is 0.000 
+Upper bound is 3.142 (real value for pi is coded)
+Max interval is  512.000 
+Integration results are: 
+n 	|Area 		|Percent relative error 
+---------------------------------------------
+   1 	|   0.000 	|   1.6386768 	| 185.4481 
+   2 	|   0.000 	|   0.8193384 	|  42.7241 
+   4 	|   0.551 	|   0.6259357 	|   9.0344 
+   8 	|   1.944 	|   0.5865278 	|   2.1698 
+  16 	|   4.836 	|   0.5771555 	|   0.5372 
+  32 	|  10.667 	|   0.5748407 	|   0.1340 
+  64 	|  22.354 	|   0.5742637 	|   0.0335 
+ 128 	|  45.740 	|   0.5741199 	|   0.0084 
+ 256 	|  92.518 	|   0.5740836 	|   0.0021 
+ 512 	| 186.076 	|   0.5740746 	|   0.0005 
+The value of the integral of f(x) = 0.5740746 .
+The percent relative error = 0.0005 %.
+
+----------------------------------------------------------
+Question 2: SIMPSON's 1/3 METHOD 
+Given f(x) = (e^-x)*(cos(x))*(cos(x)) 
+ Lower bound is 0.000 
+Upper bound is 3.142 (real value for pi is coded)
+Max interval is  512.000 
+Integration results are: 
+n 	|Area 		|Percent relative error 
+---------------------------------------------
+   1 	|   0.0000000 	| 90.2987 
+   2 	|   0.0000000 	|  4.8506 
+   4 	|   1.1014366 	|  2.1955 
+   8 	|   3.3371763 	|  0.1184 
+  16 	|   7.7273393 	|  0.0070 
+  32 	|  16.4990482 	|  0.0004 
+  64 	|  34.0414467 	|  0.0000 
+ 128 	|  69.1261444 	|  0.0000 
+ 256 	| 139.2954254 	|  0.0000 
+ 512 	| 279.6342468 	|  0.0000 
+The value of the integral of f(x) =   0.5740718 .
+The percent relative error =  0.0000 %.
